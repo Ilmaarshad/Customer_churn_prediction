@@ -1,0 +1,52 @@
+<html>
+<body>
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+
+    <div class="form-group">
+        <label for="Age">Age:</label>
+        <input type="text" id="age" name="age" placeholder="Enter age (float)">
+    </div>
+
+
+    <div class="form-group">
+        <label for="Gender">Gender:</label>
+        <select id="Gender" name="Gender">
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="Location">Location:</label>
+        <select id="Location" name="Location">
+          <option value="Houston">Houston</option>
+          <option value="Los Angeles">Los Angeles</option>
+          <option value="Miami">Miami</option>
+          <option value="Chicago">Chicago</option>
+          <option value="New York">New York</option>
+        </select>
+      </div>
+
+    <div class="form-group">  
+        <label for="Subscription_Length_Months">Subscription_Length_Months:</label>
+        <input type="text" id="Subscription_Length_Months" name="Subscription_Length_Months" placeholder="Enter Subscription Length Months (float)">
+    </div>
+    
+    <div class="form-group">
+        <label for="Monthly_Bill">Monthly_Bill:</label>
+        <input type="text" id="Monthly_Bill" name="Monthly_Bill" placeholder="Enter Monthly_Bill (float)">
+    </div>
+    
+    <div class="form-group">
+        <label for="Total_Usage_GB">Total_Usage_GB:</label>
+        <input type="text" id="Total_Usage_GB" name="Total_Usage_GB" placeholder="Enter Total Usage GB (float)">
+    </div>
+    
+  
+
+
+<div style="clear:both;"></div>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
