@@ -17,6 +17,8 @@ class PredictPipeline:
 
             preprocessor=load_object(preprocessor_path)
             model=load_object(model_path)
+            print('this is preprocessor',preprocessor)
+            print('this is inside prediction function   ' , type(features))
 
             data_scaled=preprocessor.transform(features)
 
@@ -67,7 +69,8 @@ class CustomData:
         
 if __name__=="__main__":
     predict_obj = PredictPipeline()
-    data  = CustomData(22,'Female',17,73.36,236,22)
-    df = data.get_data_as_dataframe()
+    #data  = CustomData(22,'Female','Houston',17,73.36,236)
+    df =  pd.DataFrame({'Age': [22], 'Gender': ['Male'], 'Location': ['Los Angeles'], 'Subscription_Length_Months': [12], 'Monthly_Bill': [234], 'Total_Usage_GB': [100]})
+    #df = data.get_data_as_dataframe()
     print(df)
     print(predict_obj.predict(df))

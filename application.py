@@ -22,13 +22,14 @@ def predict_datapoint():
         data=CustomData(
             Age= float(request.form.get('Age')),
             Gender = request.form.get('Gender'),
-            Location = (request.form.get('Location')),
+            Location = request.form.get('Location'),
             Subscription_Length_Months = float(request.form.get('Subscription_Length_Months')),
             Monthly_Bill = float(request.form.get('Monthly_Bill')),
             Total_Usage_GB = float(request.form.get('Total_Usage_GB'))
 
         )
         final_new_data=data.get_data_as_dataframe()
+        print("this is final new data", final_new_data)
         predict_pipeline=PredictPipeline()
         pred=predict_pipeline.predict(final_new_data)
 
