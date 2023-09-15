@@ -34,8 +34,12 @@ def predict_datapoint():
         pred=predict_pipeline.predict(final_new_data)
 
         results=round(pred[0],2)
-
-        return render_template('result.html',final_result=results)
+        if results == 0.0:
+            return render_template('result.html',final_result="NO")
+        else:
+            return render_template('result.html',final_result="YES")
+            
+        
 
 
 

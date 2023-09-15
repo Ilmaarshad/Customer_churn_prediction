@@ -55,8 +55,8 @@ class CustomData:
                 'Age':[self.Age],
                 'Gender':[self.Gender],
                 'Location':[self.Location],
-                'Subscription_Monthly_Bill':[self.Subscription_Length_Months],
-                'Month_Bill':[self.Monthly_Bill],
+                'Subscription_Length_Months':[self.Subscription_Length_Months],
+                'Monthly_Bill':[self.Monthly_Bill],
                 'Total_Usage_GB':[self.Total_usage_GB]
 
             }
